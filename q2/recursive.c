@@ -1,4 +1,8 @@
 /* FIXME: Implement! */
+#include<stdio.h>
+#include<stdlib.h>
+
+
 char smallest_character(char str[],char c)
 {
     if(*str=='\0')
