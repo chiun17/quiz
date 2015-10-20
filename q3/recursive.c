@@ -24,7 +24,7 @@ void flatten(TreeNode *root){
     TreeNode *node_t;
     node_t= root->right;
 
-    root->right = root->right;
+    root->right = root->left;
     root->left = NULL;
 
     while(root->right!=NULL){

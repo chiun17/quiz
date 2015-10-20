@@ -3,17 +3,22 @@
 #include<stdlib.h>
 
 
-char smallest_character(char str[],char c)
+char smallest_character_r(char str[],char c,char firstStr)
 {
     if(*str=='\0')
-        return *str;
+        return firstStr;
     else if(*str>c){
         return *str;
     }else{
         str++;
-        return smallest_character(str,c);
+        return smallest_character_r(str,c,firstStr);
     }
 }
+
+char smallest_character(char str[],char c){
+    return smallest_character_r(str,c,str[0]);
+}
+
 
 
 
